@@ -5,5 +5,4 @@ lib.mkIf (windowManager == "hyprland") {
     xwayland.enable = true;
   };
   services.xserver.enable = false;
-  stylix.targets.hyprland.enable = true;
 } 

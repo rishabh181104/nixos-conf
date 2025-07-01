@@ -15,8 +15,7 @@ lib.mkIf (windowManager == "qtile") {
       xrandr --output HDMI-4 --mode "1920x1080" --rate "60.01"
       xwallpaper --zoom ~/Wallpapers/Pictures/Concept-Japanese\ house.png
       xset r rate 200 35 &
-    '';
+      '';
   };
   programs.hyprland.enable = false;
-  stylix.targets.qtile.enable = true;
 } 

@@ -29,8 +29,8 @@
       userName = "ste";
       userPackages = [ pkgs.fish pkgs.tree ];
       theme = {
-        image = "/home/ste/dotfiles/themes/catppuccin-mocha/catppuccin-mocha.png";
-        base16Scheme = "/home/ste/dotfiles/themes/catppuccin-mocha/catppuccin-mocha.yaml";
+        image = "/home/ste/nixos-conf/themes/catppuccin-mocha/catppuccin-mocha.png";
+        base16Scheme = "/home/ste/nixos-conf/themes/catppuccin-mocha/catppuccin-mocha.yaml";
       };
       windowManager = "hyprland";
     };
@@ -42,8 +42,8 @@
       userName = "work";
       userPackages = [ pkgs.fish pkgs.git pkgs.tree ];
       theme = {
-        image = "/home/work/dotfiles/themes/solarized-dark/solarized-dark.png";
-        base16Scheme = "/home/work/dotfiles/themes/solarized-dark/solarized-dark.yaml";
+        image = "/home/work/nixos-conf/themes/solarized-dark/solarized-dark.png";
+        base16Scheme = "/home/work/nixos-conf/themes/solarized-dark/solarized-dark.yaml";
       };
       windowManager = "hyprland";
     };

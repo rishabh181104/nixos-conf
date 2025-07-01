@@ -1,21 +1,21 @@
 { config, pkgs, theme, ... }:
 {
-  programs.stylix.enable = true;
+  stylix.enable = true;
 # Example: set a default theme (customize as needed)
-  stylix.targets = {
-    alacritty.enable = true;
-    kitty.enable = true;
-    foot.enable = true;
-    waybar.enable = true;
-    gtk.enable = true;
-    bat.enable = true;
-    btop.enable = true;
-    dunst.enable = true;
-    rofi.enable = true;
-    zathura.enable = true;
-    qt.enable = true;
-  };
-
+# stylix.targets = {
+#   alacritty.enable = true;
+#   kitty.enable = true;
+#   foot.enable = true;
+#   waybar.enable = true;
+#   gtk.enable = true;
+#   bat.enable = true;
+#   btop.enable = true;
+#   dunst.enable = true;
+#   rofi.enable = true;
+#   zathura.enable = true;
+#   qt.enable = true;
+# };
+#
   stylix.fonts = {
     serif = {
       package = pkgs.dejavu_fonts;
