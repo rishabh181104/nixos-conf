@@ -11,13 +11,9 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.2";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { self, nixpkgs, zen-browser, lanzaboote, home-manager, stylix, ... }@inputs:
+  outputs = { self, nixpkgs, zen-browser, home-manager, stylix, ... }@inputs:
     let
     lib = nixpkgs.lib;
   system = "x86_64-linux";
@@ -67,14 +63,8 @@
           hostName = hosts.${currentHost}.hostName;
           theme = hosts.${currentHost}.theme;
         };
-        modules = [ hosts.${currentHost}.config lanzaboote.nixosModules.lanzaboote ({
-            boot.loader.systemd-boot.enable = lib.mkForce false;
-            boot.lanzaboote = {
-            enable = true;
-            pkiBundle = "/var/lib/sbctl";
-            };
-            }) 
-        stylix.nixosModules.stylix
+        modules = [ hosts.${currentHost}.config 
+          stylix.nixosModules.stylix
         ];
       };
     };
