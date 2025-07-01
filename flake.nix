@@ -7,13 +7,17 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     zen-browser.url = "github:youwen5/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v0.4.2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, zen-browser, lanzaboote, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, zen-browser, lanzaboote, home-manager, stylix, ... }@inputs:
     let
     lib = nixpkgs.lib;
   system = "x86_64-linux";
@@ -69,7 +73,9 @@
             enable = true;
             pkiBundle = "/var/lib/sbctl";
             };
-            }) ];
+            }) 
+        stylix.nixosModules.stylix
+        ];
       };
     };
     homeConfigurations = {
