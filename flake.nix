@@ -17,14 +17,14 @@
     let
     lib = nixpkgs.lib;
   system = "x86_64-linux";
-  currentHost = "nix-ste"; # Change this to "work" to switch users/hosts
+  currentHost = "nix-ste"; # Change this to "work" to switch profiles/hosts
     pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
   windowManager = hosts.${currentHost}.windowManager or "hyprland";
   hosts = {
     nix-ste = {
       user = "default";
-      config = ./users/default/configuration.nix;
-      home = ./users/default/home.nix;
+      config = ./profiles/default/configuration.nix;
+      home = ./profiles/default/home.nix;
       hostName = "nix-ste";
       userName = "ste";
       userPackages = [ pkgs.fish pkgs.tree ];
@@ -36,8 +36,8 @@
     };
     work = {
       user = "work";
-      config = ./users/work/configuration.nix;
-      home = ./users/work/home.nix;
+      config = ./profiles/work/configuration.nix;
+      home = ./profiles/work/home.nix;
       hostName = "work-machine";
       userName = "work";
       userPackages = [ pkgs.fish pkgs.git pkgs.tree ];
