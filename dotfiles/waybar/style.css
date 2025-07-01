@@ -129,7 +129,6 @@
 * System memory usage display
 */
 #memory {
-  border-radius: 0px 5px 5px 0px;
 }
 
 /* =============================================================================
@@ -231,7 +230,7 @@
 * Storage space indicator
 */
 #disk {
-  border-radius: 5px 0px 0px 5px; /* Rounded left corners */
+  /* border-radius: 5px 0px 0px 5px; /* Rounded left corners */ */
   color: @color6; /* Cyan for disk usage */
 }
 

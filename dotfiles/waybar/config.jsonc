@@ -26,26 +26,28 @@
   // ==========================================
   // Left modules: Stream status, workspaces, network speed
   "modules-left": [
-    "custom/launcher",                // Application launcher (Rofi)
     "custom/stream_status",          // Custom stream status indicator
-    "hyprland/workspaces",           // Hyprland workspace switcher
+    "battery#forest",                // Battery status
+    "pulseaudio",                    // Audio controls
+    "memory",                        // Memory usage
+    "disk",                          // Root disk usage
+    "disk#home",                     // Home disk usage
+    // "cpu",                           // CPU usage
+    // "custom/launcher",                // Application launcher (Rofi)
     "custom/netspeed"                // Network speed monitor
   ],
 
   // Center modules: Clock and system tray
   "modules-center": [
-    "clock",                         // Date and time
-    "tray"                           // System tray
+    "hyprland/workspaces"           // Hyprland workspace switcher
   ],
 
   // Right modules: System monitoring and controls
   "modules-right": [
-    "cpu",                           // CPU usage
-    "memory",                        // Memory usage
-    "disk",                          // Root disk usage
-    "disk#home",                     // Home disk usage
-    "pulseaudio",                    // Audio controls
-    "battery#forest",                // Battery status
+    "tray",                           // System tray
+    "weekday",
+    "date",
+    "clock",                         // Date and time
     "custom/lock"                    // Lock screen button
   ],
 
@@ -91,9 +93,16 @@
   // ==========================================
   // Date and time display
   "clock": {
-    "timezone": "India/Kolkata",     // Timezone
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",  // Tooltip format
-    "format": "{:%d - %H:%M}"        // Display format
+    "format": "{:%d %B %Y}",     // Display format
+    "tooltip": false
+  },
+  "date": {
+    "format": "{:%d %B %Y}",
+    "tooltip": false
+  },
+  "weekday": {
+    "format": "{:%A}", // Full weekday name (e.g., Wednesday)
+    "tooltip": false
   },
 
   // ==========================================
