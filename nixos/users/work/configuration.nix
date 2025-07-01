@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, windowManager ? "hyprland", userName ? "work", userPackages ? [ pkgs.fish pkgs.git pkgs.tree ], hostName ? "work-machine", theme ? { image = null; base16Scheme = null; }, ... }:
+{ config, lib, pkgs, inputs, windowManager, userName, userPackages, hostName, theme, ... }:
 {
   imports = [
     ./hardware.nix
@@ -19,7 +19,7 @@
     ../../modules/firewall.nix
   ];
 
-  # Machine-specific settings:
+  # Use centralized settings
   time.timeZone = "UTC";
   system.stateVersion = "25.05";
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

@@ -1,4 +1,4 @@
-{ config, pkgs, userName ? "ste", userPackages ? [ pkgs.fish pkgs.tree ], ... }:
+{ config, pkgs, userName, userPackages, ... }:
 {
   users.users.${userName} = {
     isNormalUser = true;

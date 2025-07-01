@@ -56,7 +56,8 @@
       ${currentHost} = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
-          inherit inputs windowManager;
+          inherit inputs;
+          windowManager = hosts.${currentHost}.windowManager;
           userName = hosts.${currentHost}.userName;
           userPackages = hosts.${currentHost}.userPackages;
           hostName = hosts.${currentHost}.hostName;

@@ -1,4 +1,4 @@
-{ config, pkgs, theme ? { image = null; base16Scheme = null; }, ... }:
+{ config, pkgs, theme, ... }:
 {
   programs.stylix.enable = true;
   # Example: set a default theme (customize as needed)

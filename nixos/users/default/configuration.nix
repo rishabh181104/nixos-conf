@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, windowManager ? "hyprland", userName ? "ste", userPackages ? [ pkgs.fish pkgs.tree ], hostName ? "nix-ste", theme ? { image = null; base16Scheme = null; }, ... }:
+{ config, lib, pkgs, inputs, windowManager, userName, userPackages, hostName, theme, ... }:
 {
   imports = [
     ./hardware.nix
