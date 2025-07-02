@@ -26,8 +26,8 @@
       name = "DejaVu Sans";
     };
     monospace = {
-      package = pkgs.nerdfonts.override { fonts = [ "Meslo" ]; }; # Meslo LG S from Nerd Fonts
-        name = "MesloLGS Nerd Font Mono";
+      package = pkgs.meslo-lgs-nf;
+      name = "MesloLGS Nerd Font Mono";
     };
     emoji = {
       package = pkgs.noto-fonts-emoji;
