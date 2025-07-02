@@ -61,7 +61,7 @@
   home.file = {
 #   ".bashrc".source = ./dotfiles/bashrc;
 #   ".tmux.conf".source = ./dotfiles/tmux.conf;
-    "starship.toml".source = ./../../dotfiles/starship.toml
+    "starship.toml".source = ./../../dotfiles/starship.toml;
   };
 
 # Files for ~/.local/share/
