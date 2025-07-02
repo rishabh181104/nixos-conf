@@ -6,41 +6,75 @@
   home.username = userName;
   home.homeDirectory = homeDirectory;
 
-# This value determines the Home Manager release that your configuration is
-# compatible with. This helps avoid breakage when a new Home Manager release
-# introduces backwards incompatible changes.
-#
-# You should not change this value, even if you update Home Manager. If you do
-# want to update the value, then make sure to first check the Home Manager
-# release notes.
+  xdg.configFile = {
+    "hypr" = {
+      source = ./../../dotfiles/hypr;
+      recursive = true;
+    };
+    "alacritty" = {
+      source = ./../../dotfiles/alacritty;
+      recursive = true;
+    };
+    "kitty" = {
+      source = ./../../dotfiles/kitty;
+      recursive = true;
+    };
+    "fish" = {
+      source = ./../../dotfiles/fish;
+      recursive = true;
+    };
+    "fastfetch" = {
+      source = ./../../dotfiles/fastfetch;
+      recursive = true;
+    };
+    "nvim" = {
+      source = ./../../dotfiles/nvim;
+      recursive = true;
+    };
+    "rofi" = {
+      source = ./../../dotfiles/rofi;
+      recursive = true;
+    };
+    "waybar" = {
+      source = ./../../dotfiles/waybar;
+      recursive = true;
+    };
+    "wlogout" = {
+      source = ./../../dotfiles/wlogout;
+      recursive = true;
+    };
+    "qtile" = {
+      source = ./../../dotfiles/qtile;
+      recursive = true;
+    };
+    "picom" = {
+      source = ./../../dotfiles/picom;
+      recursive = true;
+    };
+    "mako" = {
+      source = ./../../dotfiles/mako;
+      recursive = true;
+    };
+  };
+
+# Files for home directory
+  home.file = {
+#   ".bashrc".source = ./dotfiles/bashrc;
+#   ".tmux.conf".source = ./dotfiles/tmux.conf;
+    "starship.toml".source = ./../../dotfiles/starship.toml
+  };
+
+# Files for ~/.local/share/
+# xdg.dataFile = {
+#   "app/datafile".source = ./data/datafile;
+# };
+
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
-# The home.packages option allows you to install Nix packages into your
-# environment.
     home.packages = with pkgs; [
     hello
     ];
 
-# Home Manager is pretty good at managing dotfiles. The primary way to manage
-# plain files is through 'home.file'.
-  home.file = {
-# # Building this configuration will create a copy of 'dotfiles/screenrc' in
-# # the Nix store. Activating the configuration will then make '~/.screenrc' a
-# # symlink to the Nix store copy.
-# ".screenrc".source = dotfiles/screenrc;
-
-# # You can also set the file content immediately.
-# ".gradle/gradle.properties".text = ''
-#   org.gradle.console=verbose
-#   org.gradle.daemon.idletimeout=3600000
-# '';
-  };
-
-# Home Manager can also manage your environment variables through
-# 'home.sessionVariables'. These will be explicitly sourced when using a
-# shell provided by Home Manager. If you don't want to manage your shell
-# through Home Manager then you have to manually source 'hm-session-vars.sh'
-# located at either
 #
 #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
 #
