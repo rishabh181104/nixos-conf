@@ -27,7 +27,7 @@
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   services.displayManager.sddm = {
     enable = lib.mkForce true;
-    wayland.enable = lib.Force true;
+    wayland.enable = lib.mkForce true;
   };
 
   services.picom.enable = lib.mkDefault true;
