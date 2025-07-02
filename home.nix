@@ -8,51 +8,51 @@
 
   xdg.configFile = {
     "hypr" = {
-      source = ./../../dotfiles/hypr;
+      source = ./dotfiles/hypr;
       recursive = true;
     };
     "alacritty" = {
-      source = ./../../dotfiles/alacritty;
+      source = ./dotfiles/alacritty;
       recursive = true;
     };
     "kitty" = {
-      source = ./../../dotfiles/kitty;
+      source = ./dotfiles/kitty;
       recursive = true;
     };
     "fish" = {
-      source = ./../../dotfiles/fish;
+      source = ./dotfiles/fish;
       recursive = true;
     };
     "fastfetch" = {
-      source = ./../../dotfiles/fastfetch;
+      source = ./dotfiles/fastfetch;
       recursive = true;
     };
     "nvim" = {
-      source = ./../../dotfiles/nvim;
+      source = ./dotfiles/nvim;
       recursive = true;
     };
     "rofi" = {
-      source = ./../../dotfiles/rofi;
+      source = ./dotfiles/rofi;
       recursive = true;
     };
     "waybar" = {
-      source = ./../../dotfiles/waybar;
+      source = ./dotfiles/waybar;
       recursive = true;
     };
     "wlogout" = {
-      source = ./../../dotfiles/wlogout;
+      source = ./dotfiles/wlogout;
       recursive = true;
     };
     "qtile" = {
-      source = ./../../dotfiles/qtile;
+      source = ./dotfiles/qtile;
       recursive = true;
     };
     "picom" = {
-      source = ./../../dotfiles/picom;
+      source = ./dotfiles/picom;
       recursive = true;
     };
     "mako" = {
-      source = ./../../dotfiles/mako;
+      source = ./dotfiles/mako;
       recursive = true;
     };
   };
@@ -61,7 +61,7 @@
   home.file = {
 #   ".bashrc".source = ./dotfiles/bashrc;
 #   ".tmux.conf".source = ./dotfiles/tmux.conf;
-    "starship.toml".source = ./../../dotfiles/starship.toml;
+    "starship.toml".source = ./dotfiles/starship.toml;
   };
 
 # Files for ~/.local/share/
