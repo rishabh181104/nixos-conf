@@ -2,6 +2,7 @@
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
+# ./hardware.nix ## only enable when you want to force partitions
       ../../modules/networking.nix
       ../../modules/users.nix
       ../../modules/shell.nix
