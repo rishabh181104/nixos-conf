@@ -3,7 +3,7 @@
   environment.systemPackages = with pkgs; [
 # Add your packages here, split into logical groups if needed
     hyprland hypridle hyprland-qt-support hyprland-qtutils hyprlock hyprpicker pyprland xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-hyprland waybar wlogout wlroots_0_19 swww rose-pine-hyprcursor libsForQt5.xwaylandvideobridge xwayland-run mako pavucontrol flat-remix-gtk papirus-icon-theme jamesdsp qt6.qtbase qt6.qtsvg qt6.qtvirtualkeyboard qt6.qtmultimedia imagemagick nwg-look
-# google-chrome inputs.zen-browser.packages.${pkgs.system}.default discord codecursor nodejs_24
+# google-chrome discord code-cursor nodejs_24 brave
       sbctl niv mokutil openssl linuxHeaders mkinitcpio-nfs-utils linuxKernel.kernels.linux_zen efibootmgr
       stirling-pdf thunderbird libreoffice-fresh ntfs3g exfat exfatprogs gvfs mtpfs libmtp
       whatsie

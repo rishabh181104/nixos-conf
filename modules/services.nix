@@ -1,11 +1,11 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
-  security.polkit.enable = true;
-  boot.loader.systemd-boot.enable = true;
+  security.polkit.enable = lib.mkForce true;
+  boot.loader.systemd-boot.enable = lib.mkForce true;
   boot.loader.systemd-boot.configurationLimit = 8;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.canTouchEfiVariables = lib.mkForce true;
   nix.gc = {
-    automatic = true;
+    automatic = lib.mkForce true;
     dates = "weekly";
     options = "--delete-older-than 8";
   };
@@ -13,16 +13,17 @@
     "org.secureboot.osRelease" = config.environment.etc."os-release".source;
   };
   services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
+    enable = lib.mkForce true;
+    wayland.enable = lib.mkForce true;
   };
-  services.picom.enable = true;
+  services.picom.enable = lib.mkForce true;
   services.pipewire = {
-    enable = true;
-    pulse.enable = true;
+    enable = lib.mkForce true;
+    pulse.enable = lib.mkForce true;
   };
-  services.libinput.enable = true;
-  services.openssh.enable = true;
-  programs.firefox.enable = true;
-  programs.ssh.startAgent = true;
+  services.libinput.enable = lib.mkForce true;
+  services.openssh.enable = lib.mkForce true;
+  programs.firefox.enable = lib.mkForce true;
+  programs.ssh.startAgent = lib.mkForce true;
+  nixpkgs.config.allowUnfree = lib.mkForce true;
 } 
