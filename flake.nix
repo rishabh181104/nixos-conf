@@ -27,8 +27,8 @@
       userName = "ste";
       userPackages = [ pkgs.fish pkgs.tree ];
       theme = {
-        image = "$HOME/nixos-conf/themes/everforest/everforest.png";
-        base16Scheme = "$HOME/nixos-conf/themes/everforest/everforest.yaml";
+        image = "/home/ste/nixos-conf/themes/everforest/everforest.png";
+        base16Scheme = "/home/ste/nixos-conf/themes/everforest/everforest.yaml";
       };
       windowManager = "hyprland";
     };
@@ -40,8 +40,8 @@
       userName = "work";
       userPackages = [ pkgs.fish pkgs.git pkgs.tree ];
       theme = {
-        image = "$HOME/nixos-conf/themes/solarized-dark/solarized-dark.png";
-        base16Scheme = "$HOME/nixos-conf/themes/solarized-dark/solarized-dark.yaml";
+        image = "/home/work/nixos-conf/themes/solarized-dark/solarized-dark.png";
+        base16Scheme = "/home/work/nixos-conf/themes/solarized-dark/solarized-dark.yaml";
       };
       windowManager = "hyprland";
     };
